@@ -15,6 +15,7 @@ const resultContainer = document.querySelector(".results-container")
 const thanks = document.querySelector(".thanks")
 const cheap = document.querySelector(".cheapskate")
 const body = document.querySelector("body")
+const resultHead = document.querySelector('.result-head')
     
 //?Set default percentages
 let percentages = [15, 20, 25]
@@ -74,11 +75,13 @@ submit.addEventListener('click', () =>{
         */
         if (custom  < 15 ) {
             body.classList.add('cheap')
-            cheap.classList.remove('hide')
+            // cheap.classList.remove('hide')
+            resultHead.textContent = "Wow what a cheapskate!"
             
         }else if (custom > 30) {
             body.classList.add('thankyou')
-            thanks.classList.remove('hide')
+            // thanks.classList.remove('hide')
+            resultHead.textContent = "Thank you for your generous tip!"
         
 
         }
@@ -93,6 +96,8 @@ submit.addEventListener('click', () =>{
     buildTable(data)
     tipForm.classList.add("hide")
     resultContainer.classList.remove("hide")
+
+
 })
     
     

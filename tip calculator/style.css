@@ -66,13 +66,18 @@ button{
     margin-bottom: 200px
     margin-top 50px ;
     align-items: center;
+    justify-content: center;
 }
 
     
 table, th, td {
     border: 1px solid;
-    width: 100%;
-    border-collapse: separate;
+    text-align: center;
+    justify-content: center;
+    display: 
+
+
+ 
 }
 
 button {

@@ -13,20 +13,18 @@
     <body>
         <div class="tipForm">
             <h1 class="header">Tip Calculator</h1>
-            <input class="bill" type="number" name="Bill Amount" id="bill" placeholder="Enter Bill Amount">
+            <input class="bill" type="text" name="Bill Amount" id="bill" placeholder="Enter Bill Amount">
             <input class="custom" type="number" name="Custom Amount" id="custom" placeholder="Custom Tip %">
             <button class="submit">Submit</button>
         </div>
         <div class="results-container hide">
-        <h1 class="thanks hide">Thank you for your generous tip!</h1>
-        <h1 class="cheapskate hide">Wow what a cheapskate!</h1>
       <h4 class="result-head">Here are your tip calculations</h4>
         <table class="results" id="table">
             <thead>
 
                 <tr>
-                    <th>Tip Percentage</th>
-                    <th>Bill</th>
+                    <th>Tip %</th>
+                    <th>Initial Bill</th>
                     <th>Tip Amount</th>
                     <th>Total Bill</th>
                 </tr>
