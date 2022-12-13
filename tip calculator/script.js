@@ -24,11 +24,14 @@ let percentages = [15, 20, 25]
 const calculateTip = (bill, percentage) => {
     const tipDecimal = percentage / 100
     console.log(tipDecimal)
-    return tipDecimal * bill
+    const tip =  tipDecimal * bill 
+    console.log(typeof(tip))
+    return tip.toFixed(2)
 }
 //? Just returns your bill total
 const totalBill = (bill, tip) => {
-    return bill + tip
+    const total =  bill + tip
+    return total.toFixed(2)
 }
 
 
@@ -55,11 +58,11 @@ const buildTable = (data) => {
 submit.addEventListener('click', () =>{
     /*
     ? Have to define these 2 variables inside this event listener.
-    ? This is because if we define them up top they will get set when loads.
+    ? This is because if we define them up top they will get set when the page loads.
     ? This will not work because the input boxes are empty on load, thus always making them null.
     */
     const custom = document.querySelector(".custom").value
-    const bill = document.getElementById("bill").value
+    let bill = Number(document.getElementById("bill").value)
     if(!bill|| isNaN(bill) ){
             alert("You must enter a valid bill") 
             return
@@ -85,7 +88,7 @@ submit.addEventListener('click', () =>{
     //? For each percentage run the numbers and push them to an array that will be passed to the buildTable function
     for ( const item  of percentages) {
         let tip = calculateTip(bill, item)
-        data.push({TipPercentage: item, bill: bill, tip: tip, TotalBill: totalBill(Number(bill), tip)})
+        data.push({TipPercentage: item + '%', bill: '$' + bill, tip: '$' + tip, TotalBill: '$' + totalBill(Number(bill), Number(tip))})
         }
     buildTable(data)
     tipForm.classList.add("hide")
