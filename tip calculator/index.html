@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tip Calulator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="tipForm">
+            <h1 class="header">Tip Calculator</h1>
+            <input class="bill" type="number" name="Bill Amount" id="bill" placeholder="Enter your Bill Amount">
+            <input class="custom" type="number" name="Custom Amount" id="custom" placeholder="Optional custom tip">
+            <button class="submit">Submit</button>
+        </div>
+        <div class="results-container hide">
+        <h1 class="thanks hide">Thank you for your generous tip!</h1>
+        <h1 class="cheapskate hide">Wow what a cheapskate!</h1>
+      <h4 class="result-head">Here are your tip calculations</h4>
+        <table class="results" id="table">
+            <thead>
+
+                <tr>
+                    <th>Tip Percentage</th>
+                    <th>Bill</th>
+                    <th>Tip Amount</th>
+                    <th>Total Bill</th>
+                </tr>
+                
+            </thead>
+        </table>
+      
+        <button class="goback">Enter New Tip</button>
+    </div>
+
+    
+</body>
+<script src="script.js"></script>
+</html> 
