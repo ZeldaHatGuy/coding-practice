@@ -74,7 +74,7 @@ submit.addEventListener('click', () =>{
         if (custom  < 15 ) {
             body.classList.add('cheap')
             // cheap.classList.remove('hide')
-            resultHead.textContent = "Wow what a cheapskate!"
+            resultHead.textContent = "BRUH! what a cheapskate!"
             
         }else if (custom > 30) {
             body.classList.add('thankyou')
